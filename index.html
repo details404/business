@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+</head>
+<style>
+    .text{
+        position: relative;
+        bottom: -300px;
+        animation: colors 3s;
+    }
+    /*
+    @keyframes colors{
+        0%{}
+        20%{color:#ff3;}
+        40%{color: #333;}
+    }*/
+    .btn{
+        width: 100px;
+        height: 100px;
+        background: #008;
+        border-radius: 20px;
+        font-size: 1rem;
+        color: #f3f3f3;
+        position: relative;
+        bottom: -300px;
+    }
+    .btn:hover{
+        background: #f3f3f3;
+        color: #008;
+    }
+</style>
+<body>
+    <center>
+        <div class="text">
+            <h4 style="color: purple;">JOIN<span style="color:black;">  USING</span></h4>
+        </div>
+        <button class="btn">
+            FaceBook
+        </button>
+    </center>
+    <script>
+        const btn = document.querySelector('button[class*="btn"]');
+        btn.addEventListener("click", () =>{
+            const a = document.createElement('a');
+            Link = "./about.html";
+            a.href = Link;
+            a.click();
+        });
+    </script>
+</body>
+</html>

